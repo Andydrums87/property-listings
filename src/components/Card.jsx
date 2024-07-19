@@ -7,14 +7,14 @@ import Guests from "../images/User_alt_duotone.svg"
 
 function Card({data}) {
     return (
-        <div class="card__container">
+        <div className="card__container">
             {data.map((item) => {
                 return (
                     <div className="card" key={item.id}>
            <div className="top__container">
             
             <span className="superhost" style={{padding: !item.superhost && "0px"}}>{item.superhost === true && "Superhost"}
-            <img className="star" src={item.superhost === true && Star} alt="" />
+            {/* <img className="star" src={item.superhost === true && Star} alt="" /> */}
            </span>
 
             <img src={item.image} alt="lodge picture" className="card__img" />
