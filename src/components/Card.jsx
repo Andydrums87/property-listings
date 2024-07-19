@@ -17,9 +17,7 @@ function Card({data}) {
             <img className="star" src={item.superhost === true && Star} alt="" />
            </span>
 
-        
-          
-            <img src={item.image} alt="" className="card__img" />
+            <img src={item.image} alt="lodge picture" className="card__img" />
             </div>
             <div className="middle__container">
                 <p id="title">{item.title}</p>

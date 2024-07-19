@@ -17,8 +17,8 @@ return (
     onChange={handleChange}
     onColor="#4E80EE"
     offColor="#97A3B6"
-    checkedIcon=""
-    uncheckedIcon=""
+    checkedIcon={false}
+    uncheckedIcon={false}
      />
     <span className="span__superhost" style={{fontSize: "0.8rem", color: "white"}}>Superhost</span>
 
