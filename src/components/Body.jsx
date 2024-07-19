@@ -38,7 +38,7 @@ function Body (props) {
     return (
        
          <div>
-            <h1 id="body__title">Over 200 stays{props.title}</h1>
+            <h1 id="body__title">Over 200 stays.{props.title}</h1>
             
           {/* <div className="card__container">
          {data.map(createCard)}
