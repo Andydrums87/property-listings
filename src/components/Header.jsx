@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "../images/hero-image.jpg"
 
 
 function Header () {
@@ -9,7 +10,7 @@ function Header () {
                 <p id="header__para">Find and book a great experience</p>
                 <p></p>
             </div>
-         <img className="hero__img"src="https://andydrums87.github.io/property-listings/assets/hero-image-2pvHLmLd.jpg" alt="Hero Image" />
+         <img className="hero__img"src={Image} alt="Hero Image" />
         </div>
     )
 }
