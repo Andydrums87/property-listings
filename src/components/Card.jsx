@@ -14,7 +14,7 @@ function Card({data}) {
            <div className="top__container">
             
             <span className="superhost" style={{padding: !item.superhost && "0px"}}>{item.superhost === true && "Superhost"}
-            {/* <img className="star" src={item.superhost === true && Star} alt="" /> */}
+            <img className="star" src={item.superhost ? Star : null} alt="" />
            </span>
 
             <img src={item.image} alt="lodge picture" className="card__img" />
@@ -39,12 +39,8 @@ function Card({data}) {
            
         </div>
                 )
-                
             })}
         </div>
-               
-      
-     
     )
 }
 

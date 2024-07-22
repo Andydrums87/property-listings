@@ -20,7 +20,7 @@ return (
     checkedIcon={false}
     uncheckedIcon={false}
      />
-    <span className="span__superhost" style={{fontSize: "0.8rem", color: "white"}}>Superhost</span>
+    <span className="span__superhost" style={{fontSize: "0.725rem", color: "white"}}>Superhost</span>
 
     </div>
    

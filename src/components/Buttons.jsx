@@ -1,20 +1,27 @@
-import React from "react"
+import React, { useState } from "react"
 import Card from "./Card";
 import App from "../App";
 
 
 
-function Buttons ({all, filter}) {
+function Buttons ({all, data, filter}) {
+
+    const [active, setActive] = useState("none");
+    const [newData, setNewData] = useState([])
+    
+
 
     return (
     
        <div className="btn__container">
-            <button type="button" className="country__btn" onClick={() => all()}>All Stays</button>
-            <button type="button" onClick={() => filter('Norway')} className="country__btn">Norway</button>
-            <button className="country__btn" onClick={() => filter('Finland')}>Finland</button>
-            <button className="country__btn" onClick={() => filter('Sweden')}>Sweden</button>
-            <button className="country__btn" onClick={() => filter('Switzerland')}>Switzerland</button>
-       </div>
+            <button value="1" type="button" className={`country__btn ${active === "first" ? "country__btn__active" : ""}`} onClick={() => {all(); setActive("first")}}>All Stays</button>
+            <button value="2" type="button" className={`country__btn ${active === "second" ? "country__btn__active" : ""}`}onClick={() => {filter('Norway'); setActive("second")}}>Norway</button>
+            <button value="3" type="button"  className={`country__btn ${active === "third" ? "country__btn__active" : ""}`}onClick={() => {filter('Finland'); setActive("third")}}>Finland</button>
+            <button value="4" type="button"  className={`country__btn ${active === "fourth" ? "country__btn__active" : ""}`}onClick={() => {filter('Sweden'); setActive("fourth")}}>Sweden</button>
+            <button value="5" type="button"  className={`country__btn ${active === "fifth" ? "country__btn__active" : ""}`}onClick={() => {filter('Switzerland'); setActive("fifth")}}>Switzerland</button>
+        </div>
+        
+       
      
     )
 }

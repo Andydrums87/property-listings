@@ -27,7 +27,11 @@ function App() {
     const filter = (button) => {
       const filteredData = allCountryData.filter(item => item.location === button)
       setData(filteredData)
-    }
+      
+  }
+      
+
+    
 
     const allCountries = (button) => {
       setData(allCountryData)
@@ -43,9 +47,9 @@ function App() {
    }
  
     const filterBedroom = () => {
-      
       const filteredBedroom = allCountryData.filter(item=>{ return item.capacity.bedroom === 1})
       setData(filteredBedroom)
+
     }
 
     function filterTwoBedroom () {
@@ -65,11 +69,9 @@ function App() {
   return (
     <div className="main__body">
     <Header />
-    {/* <Nav 
-    data={data}
-    /> */}
-      <div className="nav__container">
-           
+  <div className="nav__relative__container">
+
+  <div className="nav__container">
            <div className="nav__content">
            <Buttons 
           data={data}
@@ -79,7 +81,6 @@ function App() {
           <div className="nav__right">
                         <Switch 
                         data={data}
-                        
                         filter={superHostFilter}
                         all={reset}
                         />
@@ -96,6 +97,8 @@ function App() {
                        </div>
                        
                    </div>
+  </div>
+      
                
     <Body />
     <Card 
